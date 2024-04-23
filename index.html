@@ -1,0 +1,136 @@
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="menu.css">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='http://'>Home</a></li>
+      <li><a class='dropdown-arrow' href='http://'>Products</a>
+        <ul class='sub-menus'>
+          <li><a href='http://'>Producto 1</a></li>
+          <li><a href='http://'>Producto 2</a></li>
+          <li><a href='http://'>Producto 3</a></li>
+          <li><a href='http://'>Producto 4</a></li>
+        </ul>
+      </li>
+      <li><a href='http://'>Nosotros</a></li>
+      <li><a class='dropdown-arrow' href='http://'>Services</a>
+        <ul class='sub-menus'>
+          <li><a href='http://'>Servicio 1</a></li>
+          <li><a href='http://'>Servicio 2</a></li>
+          <li><a href='http://'>Servicio 3</a></li>
+        </ul>
+      </li>
+      <li><a href='http://'>Contactenos</a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Gestion de clientes</h1>
+
+<a onclick="agregarCliente()"><button class="btn">Agregar cliente</button></a>
+
+<table id="customers">
+
+<tr>
+
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+    <th>Telefono</th>
+    <th>Acciones</th>
+
+
+</tr>
+
+<tr>
+
+    <td>Carlos</td>
+    <td>Bautisa</td>
+    <td>CarlosBautista3232@gmail.com</td>
+    <td>29648897</td>
+    <td>
+        <button class="btn">Eliminar</button>
+        <button class="btn">Editar</button>
+    </td>
+
+
+</tr>
+
+<tr>
+
+    <td>Mario</td>
+    <td>Peralta</td>
+    <td>MarioelmaspiolaATR@gmail.com</td>
+    <td>26434389</td>
+
+<td>
+<button class="btn">Eliminar</button>
+<button class="btn">Editar</button>
+</td>
+
+</tr>
+
+
+
+
+
+</table>
+
+
+
+
+<div id="modal" class="modale" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Ingresar datos del cliente</h2>
+        <a onclick="CerrarModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+      </div>
+      <div class="modal-body">
+        <input type="text" Nombre="u" placeholder="Nombre" size="20" /><br>
+        <input type="text" Apellido="u" placeholder="Apellido" size="20" /><br>
+        <input type="text" Telefono="u" placeholder="Telefono" size="20" /><br>
+        <input type="text" Email="u" placeholder="Email" size="20" /><br>
+      
+      <div class="modal-footer">
+    
+  
+        <a href="#" class="btn" id="btn_ingresar">Guardar</a>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal -->
+
+
+
+
+
+<script>
+
+function agregarCliente(){
+htmlModal=document.getElementById("modal");
+htmlModal.setAttribute ("class","modale opened");
+}
+
+function CerrarModal(){
+htmlModal=document.getElementById("modal");
+htmlModal.setAttribute ("class","modale");
+}
+
+
+
+</script>
+
+
+
